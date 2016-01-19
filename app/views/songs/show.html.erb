@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @song.id%>
+</p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @song.key %>
+</p>
+
+<% if @song.comment.length > 0 %>
+<p>
+  <strong>Comment:</strong>
+  <%= @song.comment %>
+</p>
+<% else%>
+<p>
+  <strong>No comment on this song.</strong>
+</p>
+<% end %>
+
+
+<p>
+  <strong>Url:</strong>
+  <%= @song.url %>
+</p>
+<video
+    id="vid1"
+    class="video-js vjs-default-skin vjs-static-controls"
+    controls
+    autoplay
+    width="300" height="0"
+    data-setup='{ "inactivityTimeout": 0, "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "<%= @song.url %>"}] }'
+  ></video>
+  <div class="padder" style="min-height:30px;position:relative;">
+  </div>
+
+
+<%= link_to 'Edit', edit_song_path(@song) %> |
+<%= link_to 'Back', songs_path %>

@@ -1,0 +1,58 @@
+/* Always show control bar */
+.video-js {
+  position: relative;
+  z-index: 200;
+}
+.video-js .vjs-loading-spinner{
+  position: relative;
+  display: none;
+}
+
+.video-js .vjs-poster{
+  position: relative;
+  display: none;
+}
+.vjs-text-track-display{
+  position: relative;
+  display: none;
+}
+.vjs-poster{
+  display: none;
+}
+.video-js .vjs-big-play-button {
+  display: none;
+}
+
+.video-js.vjs-static-controls {
+  position: relative !important;
+}
+.video-js.vjs-static-controls .vjs-control-bar {
+  background-color:black;
+  position: relative !important;
+}
+
+/* Don't fade out controls */
+.video-js.vjs-static-controls.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+}
+
+/* Align poster to top */
+.video-js.vjs-static-controls .vjs-poster {
+  background-position: 50% 0;
+}
+
+/* Override tech height:100% */
+.video-js.vjs-static-controls .vjs-tech {
+  height: auto;
+  height: calc(100% - 30px);
+}
+
+/* Hide Full screen button */
+.video-js .vjs-fullscreen-control {
+  display: none;
+}
+
+#vid1{
+  position: relative;
+  max-height: 30px;
+  visibility: hidden;
+}
